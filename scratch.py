@@ -2,18 +2,21 @@ import numpy as np
 import cv2 as cv
 import time
 
-img = cv.imread('fame.png')
+img = cv.imread('gray_frame.png')
 img = cv.medianBlur(img,5)
+
+if (np.count_nonzero(img)):
+    print ("Black img")
 
 # Convert BGR to HSV
 hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
 
-uh = 93
-us = 139
+uh = 255
+us = 255
 uv = 255
 lh = 0
-ls = 38
-lv = 210
+ls = 0
+lv = 0
 lower_hsv = np.array([lh,ls,lv])
 upper_hsv = np.array([uh,us,uv])
 

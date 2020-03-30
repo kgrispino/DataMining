@@ -97,6 +97,7 @@ while True:
                (200, 255, 155), 1, cv.LINE_AA)
 
     cv.imshow(window_name, mask)
+    cv.imwrite("frame.png", frame)
 
     k = cv.waitKey(1) & 0xFF
     if k == 27:
